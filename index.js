@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer');
 const strategy = require("./blackjack-strategy/Suggestion.js");
 
-
 const settings = require("./settings.json");
 
 let game = {
@@ -12,6 +11,7 @@ let game = {
     playerCards: 0,
     bets: [],
 };
+
 
 (async () => {
     const browser = await puppeteer.launch({ headless: false, args: ['--disable-web-security', '--disable-features=IsolateOrigins,site-per-process'] });
@@ -115,7 +115,7 @@ let game = {
         }
         //Rozhodnutí o sázce
         if (log.includes("player actions")) {
-            await page.waitForTimeout(settings.timeout+500)
+            await page.waitForTimeout(settings.timeout + 500)
 
             if (game.dealerCard === 1 && !game.bets[game.bets.length - 1].notInsured) {
                 game.bets[game.bets.length - 1].notInsured = true

@@ -1,5 +1,5 @@
 {
-    "realMoney": false, // false je pro testování, je zde 100000 kreditu. true je za realné peníze
-    "startBet": 500, // Částka, se kterou bot začíná nové kolo po výhře, po každém prohraném kole ji zdvojnásobí, proto volte nižší částku
-    "timeout": 250 // Časový limit pro každou akci, v milisekundách
+    "realMoney": false,
+    "startBet": 500,
+    "timeout": 250
 }
